@@ -7,6 +7,10 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import stylesheet from "~/tailwind.css?url";
+import { Container } from "./components/container";
+import { Footer } from "./components/footer";
+import { Navbar } from "./components/navbar";
+import { TexturedBg } from "./components/textured-bg";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
@@ -22,7 +26,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="bg-bg text-bg-contrast">
-        {children}
+        <div className="flex flex-col min-h-screen">
+          <Navbar />
+          <div className="grow flex items-center">
+            <Container>{children}</Container>
+          </div>
+          <Footer />
+          <TexturedBg />
+        </div>
         <ScrollRestoration />
         <Scripts />
       </body>

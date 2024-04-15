@@ -48,6 +48,9 @@ module.exports = {
           typescript: {},
         },
       },
+      rules: {
+        "react/display-name": "off",
+      },
     },
 
     // Typescript
