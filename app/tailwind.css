@@ -13,6 +13,8 @@
   --color-bg: #ece5f0;
   --color-bg-alt: #b6b1d3;
   --color-bg-contrast: #101116;
+  --color-primary: #1b998b;
+  --color-primary-contrast: #f8f8f2;
 
   font-family: "Space Grotesk", sans-serif;
   font-size: 18px;
@@ -23,5 +25,12 @@
     --color-bg: #101116;
     --color-bg-alt: #303240;
     --color-bg-contrast: #ece5f0;
+    --color-primary: #3ebfb0;
+    --color-primary-contrast: #101116;
   }
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-primary-contrast);
 }
