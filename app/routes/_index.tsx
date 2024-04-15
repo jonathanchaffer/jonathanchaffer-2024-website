@@ -12,8 +12,8 @@ export const meta: MetaFunction = () => {
 
 export default function () {
   return (
-    <div className="flex flex-col gap-8 md:gap-16 items-start py-8">
-      <div>
+    <div className="flex flex-col gap-8 md:gap-16 items-start">
+      <div className="hidden sm:block">
         <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-8xl whitespace-nowrap">
           Jonathan Chaffer
         </h1>
