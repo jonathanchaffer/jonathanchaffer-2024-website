@@ -7,6 +7,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "@remix-run/react";
 import { FC } from "react";
+import { strs } from "~/content/strings";
 import { Container } from "./container";
 
 export const Footer: FC = () => {
@@ -28,7 +29,9 @@ export const Footer: FC = () => {
               icon={faLinkedin}
             />
           </div>
-          <span>© 2020—{new Date().getFullYear()} Jonathan Chaffer</span>
+          <span>
+            © 2020—{new Date().getFullYear()} {strs.JONATHAN_CHAFFER}
+          </span>
         </div>
       </Container>
     </footer>

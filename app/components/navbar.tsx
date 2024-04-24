@@ -1,6 +1,7 @@
 import { NavLink } from "@remix-run/react";
 import { FC, PropsWithChildren } from "react";
 import { $path } from "remix-routes";
+import { strs } from "~/content/strings";
 import { Container } from "./container";
 
 export const Navbar: FC = () => {
@@ -13,10 +14,10 @@ export const Navbar: FC = () => {
               isActive ? (
                 <>
                   <div className="bg-bg-contrast w-4 aspect-square hidden sm:block" />
-                  <span className="sm:hidden">Jonathan Chaffer</span>
+                  <span className="sm:hidden">{strs.JONATHAN_CHAFFER}</span>
                 </>
               ) : (
-                <span>Jonathan Chaffer</span>
+                <span>{strs.JONATHAN_CHAFFER}</span>
               )
             }
           </NavLink>

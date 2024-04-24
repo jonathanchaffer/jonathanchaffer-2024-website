@@ -2,6 +2,8 @@ import type { MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 import { $path } from "remix-routes";
 import { Card } from "~/components/card";
+import { PageHeader } from "~/components/page-header";
+import { strs } from "~/content/strings";
 
 export const meta: MetaFunction = () => {
   return [
@@ -14,18 +16,14 @@ export default function () {
   return (
     <div className="flex flex-col gap-8 md:gap-16 items-start">
       <div className="hidden sm:block">
-        <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-8xl whitespace-nowrap">
-          Jonathan Chaffer
-        </h1>
-        <h2 className="sm:text-xl md:text-2xl lg:text-4xl">
-          Developer • Designer • Artist
-        </h2>
+        <PageHeader noMargin>{strs.JONATHAN_CHAFFER}</PageHeader>
+        <h2 className="sm:text-xl md:text-2xl lg:text-4xl">{strs.TAGLINE}</h2>
       </div>
       <Card>
         <div className="flex-col-reverse md:flex-row flex gap-x-8 gap-y-4">
           <img
             src="/jonathanchaffer.jpg"
-            alt="Jonathan Chaffer"
+            alt={strs.JONATHAN_CHAFFER}
             className="w-32 h-32"
           />
           <div className="flex flex-col gap-2 max-w-prose">
