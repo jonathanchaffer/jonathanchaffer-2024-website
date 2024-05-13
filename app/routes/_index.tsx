@@ -1,7 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
-import { Link } from "@remix-run/react";
 import { $path } from "remix-routes";
 import { Card } from "~/components/card";
+import { Link } from "~/components/link";
 import { PageHeader } from "~/components/page-header";
 import { strs } from "~/content/strings";
 
@@ -20,7 +20,7 @@ export default function () {
         <h2 className="sm:text-xl md:text-2xl lg:text-4xl">{strs.TAGLINE}</h2>
       </div>
       <Card>
-        <div className="flex-col-reverse md:flex-row flex gap-x-8 gap-y-4">
+        <div className="flex-col-reverse md:flex-row flex gap-x-8 gap-y-4 p-4">
           <img
             src="/jonathanchaffer.jpg"
             alt={strs.JONATHAN_CHAFFER}
@@ -44,12 +44,9 @@ export default function () {
           </div>
         </div>
       </Card>
-      <Link
-        to={$path("/work")}
-        className="text-xl md:text-2xl lg:text-4xl hover:underline"
-      >
-        View my work &rarr;
-      </Link>
+      <div className="text-xl md:text-2xl lg:text-4xl">
+        <Link to={$path("/work")}>View my work</Link>
+      </div>
     </div>
   );
 }

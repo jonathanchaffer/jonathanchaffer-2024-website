@@ -8,6 +8,7 @@ export default {
       bg: "var(--color-bg)",
       "bg-alt": "var(--color-bg-alt)",
       "bg-contrast": "var(--color-bg-contrast)",
+      primary: "var(--color-primary)",
     },
     extend: {},
   },
