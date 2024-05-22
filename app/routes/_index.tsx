@@ -24,7 +24,7 @@ export default function () {
           <img
             src="/jonathanchaffer.jpg"
             alt={strs.JONATHAN_CHAFFER}
-            className="w-32 h-32"
+            className="w-64 md:w-auto md:h-64"
           />
           <div className="flex flex-col gap-2 max-w-prose">
             <p>
