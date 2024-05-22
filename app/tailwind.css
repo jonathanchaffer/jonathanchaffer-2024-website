@@ -10,11 +10,11 @@
 }
 
 :root {
-  --color-bg: #ece5f0;
-  --color-bg-alt: #b6b1d3;
-  --color-bg-contrast: #101116;
-  --color-primary: #1b998b;
-  --color-primary-contrast: #f8f8f2;
+  --color-bg: 236 229 278;
+  --color-bg-alt: 182 177 211;
+  --color-bg-contrast: 16 17 22;
+  --color-primary: 27 153 139;
+  --color-primary-contrast: 248 248 242;
 
   font-family: "Space Grotesk", sans-serif;
   font-size: 18px;
@@ -22,11 +22,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #101116;
-    --color-bg-alt: #303240;
-    --color-bg-contrast: #ece5f0;
-    --color-primary: #3ebfb0;
-    --color-primary-contrast: #101116;
+    --color-bg: 16 17 22;
+    --color-bg-alt: 48 50 64;
+    --color-bg-contrast: 236 229 240;
+    --color-primary: 62 191 176;
+    --color-primary-contrast: 16 17 22;
   }
 }
 

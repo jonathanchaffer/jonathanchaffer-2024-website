@@ -5,10 +5,10 @@ export default {
   theme: {
     colors: {
       transparent: "transparent",
-      bg: "var(--color-bg)",
-      "bg-alt": "var(--color-bg-alt)",
-      "bg-contrast": "var(--color-bg-contrast)",
-      primary: "var(--color-primary)",
+      bg: "rgb(var(--color-bg) / <alpha-value>)",
+      "bg-alt": "rgb(var(--color-bg-alt) / <alpha-value>)",
+      "bg-contrast": "rgb(var(--color-bg-contrast) / <alpha-value>)",
+      primary: "rgb(var(--color-primary) / <alpha-value>)",
     },
     extend: {},
   },

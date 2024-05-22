@@ -28,7 +28,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body className="bg-bg text-bg-contrast">
         <div className="flex flex-col min-h-screen">
           <Navbar />
-          <div className="grow flex items-center">
+          <div className="grow flex items-center mt-36">
             <Container>{children}</Container>
           </div>
           <Footer />

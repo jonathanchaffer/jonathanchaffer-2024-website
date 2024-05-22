@@ -1,12 +1,29 @@
 import { NavLink } from "@remix-run/react";
-import { FC, PropsWithChildren } from "react";
+import { FC, PropsWithChildren, useEffect, useState } from "react";
 import { $path } from "remix-routes";
 import { strs } from "~/content/strings";
 import { Container } from "./container";
 
 export const Navbar: FC = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="sticky top-0 py-8 z-50 bg-bg/95 backdrop-blur-lg">
+    <div
+      className={`fixed w-full top-0 z-50 border-b transition-all ${
+        isScrolled
+          ? "py-4 border-bg-contrast backdrop-blur-lg bg-bg/90"
+          : "py-8 border-transparent bg-bg"
+      }`}
+    >
       <Container>
         <div className="flex flex-col sm:flex-row justify-between items-center gap-x-8 gap-y-2">
           <NavLink to={$path("/")} className="text-2xl whitespace-nowrap">
