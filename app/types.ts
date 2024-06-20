@@ -1,4 +1,13 @@
-const tags = ["next.js", "builder.io"] as const;
+const tags = [
+  "next.js",
+  "builder.io",
+  "typescript",
+  "react",
+  "postgresql",
+  "cloud platforms",
+  "node.js",
+  "",
+] as const;
 
 export type Tag = (typeof tags)[number];
 
@@ -8,5 +17,13 @@ export type Project = {
   description: string;
   thumbnail: string;
   tags: Tag[];
-  url?: string;
-};
+  fullWidth?: boolean;
+} & (
+  | {
+      url: string;
+      linkText: string;
+    }
+  | {
+      url?: never;
+    }
+);

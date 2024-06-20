@@ -20,13 +20,13 @@ export default function () {
         <h2 className="sm:text-xl md:text-2xl lg:text-4xl">{strs.TAGLINE}</h2>
       </div>
       <Card>
-        <div className="flex-col-reverse md:flex-row flex gap-x-8 gap-y-4 p-4">
+        <div className="flex-row md:flex gap-y-4">
           <img
             src="/jonathanchaffer.jpg"
             alt={strs.JONATHAN_CHAFFER}
-            className="w-64 md:w-auto md:h-64"
+            className="w-16 md:w-64 md:h-64 aspect-square float-left m-4 rounded-full md:rounded-none"
           />
-          <div className="flex flex-col gap-2 max-w-prose">
+          <div className="max-w-prose space-y-2 p-4">
             <p>
               Hi, I&apos;m Jonathan! I&apos;m a software developer, graphic
               designer, and digital artist based in Grand Rapids, Michigan.
