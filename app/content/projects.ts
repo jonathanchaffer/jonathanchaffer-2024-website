@@ -5,7 +5,7 @@ export const projects: Project[] = [
     title: "Atomic Object",
     slug: "atomic-object",
     description:
-      "I currently work as a software consultant and developer at Atomic Object. In this role, I work closely with clients to deliver high-quality custom software solutions. Additionally, I contribute regularly to Atomic's blog, Atomic Spin.",
+      "I currently work as a software consultant and developer at Atomic Object. In this role, I work closely with clients to deliver high-quality custom software solutions. During my time at Atomic, I've worked on a variety of projects serving a range of industries, including retail, manufacturing, and franchising. I also write regularly for Atomic Spin.",
     thumbnail: "/images/atomic-object.png",
     tags: ["typescript", "react", "postgresql", "cloud platforms", "node.js"],
     fullWidth: true,
@@ -16,19 +16,19 @@ export const projects: Project[] = [
     title: "Story Soapbox",
     slug: "story-soapbox",
     description:
-      "Custom blog website built with Next.js. Uses Builder.io for content management.",
+      "Custom blog website built with Next.js. Uses Builder.io for content management. Features a custom component library that allows for easy content creation and editing.",
     thumbnail: "/images/story-soapbox.png",
     tags: ["next.js", "builder.io"],
     url: "https://storysoapbox.com",
     linkText: "Check it out",
   },
   {
-    title: "Lorem Ipsum",
-    slug: "lorem-ipsum",
+    title: "Boerigter Center App",
+    slug: "boerigter-center-app",
     description:
-      "Cupidatat ut voluptate anim enim aliquip veniam id dolor ipsum minim consectetur eu nostrud ullamco.",
-    thumbnail: "https://via.placeholder.com/512",
-    tags: [],
+      "My college capstone project was a web application for Hope College's Boerigter Center for Calling and Career. The app helps students explore work opportunities and career paths via an interactive map view.",
+    thumbnail: "/images/boerigter-center.png",
+    tags: ["typescript", "react"],
   },
   {
     title: "Lorem Ipsum",
