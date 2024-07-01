@@ -39,8 +39,8 @@ export const Navbar: FC = () => {
             }
           </NavLink>
           <div className="flex gap-4 md:gap-4">
+            <NavbarLink to={$path("/")}>Home</NavbarLink>
             <NavbarLink to={$path("/work")}>Work</NavbarLink>
-            <NavbarLink to={$path("/resume")}>Resume</NavbarLink>
             <NavbarLink to={$path("/contact")}>Contact</NavbarLink>
           </div>
         </div>
