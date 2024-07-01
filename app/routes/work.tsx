@@ -2,11 +2,12 @@ import { Card } from "~/components/card";
 import { Link } from "~/components/link";
 import { PageHeader } from "~/components/page-header";
 import { projects } from "~/content/projects";
+import { strs } from "~/content/strings";
 
 export default function () {
   return (
     <>
-      <PageHeader>Work</PageHeader>
+      <PageHeader>{strs.WORK}</PageHeader>
       <Card>
         <div className="grid grid-cols-1 xl:grid-cols-2 bg-bg-contrast gap-[1px]">
           {projects.map((project) => (

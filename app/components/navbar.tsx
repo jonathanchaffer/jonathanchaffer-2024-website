@@ -9,7 +9,7 @@ export const Navbar: FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -20,7 +20,7 @@ export const Navbar: FC = () => {
     <div
       className={`fixed w-full top-0 z-50 border-b transition-all ${
         isScrolled
-          ? "py-4 border-bg-contrast backdrop-blur-lg bg-bg/90"
+          ? "py-4 border-bg-contrast backdrop-blur-xl bg-bg/75 shadow-md"
           : "py-8 border-transparent bg-bg"
       }`}
     >
@@ -39,9 +39,9 @@ export const Navbar: FC = () => {
             }
           </NavLink>
           <div className="flex gap-4 md:gap-4">
-            <NavbarLink to={$path("/")}>Home</NavbarLink>
-            <NavbarLink to={$path("/work")}>Work</NavbarLink>
-            <NavbarLink to={$path("/contact")}>Contact</NavbarLink>
+            <NavbarLink to={$path("/")}>{strs.HOME}</NavbarLink>
+            <NavbarLink to={$path("/work")}>{strs.WORK}</NavbarLink>
+            <NavbarLink to={$path("/contact")}>{strs.CONTACT}</NavbarLink>
           </div>
         </div>
       </Container>
