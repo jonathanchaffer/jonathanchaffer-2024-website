@@ -20,11 +20,11 @@ export default function () {
         <h2 className="sm:text-xl md:text-2xl lg:text-4xl">{strs.TAGLINE}</h2>
       </div>
       <Card>
-        <div className="flex-row md:flex gap-y-4">
+        <div className="flex-row md:flex gap-y-4 items-center">
           <img
             src="/jonathanchaffer.jpg"
             alt={strs.JONATHAN_CHAFFER}
-            className="w-16 md:w-64 md:h-64 aspect-square float-left m-4 rounded-full md:rounded-none"
+            className="w-16 md:w-64 md:h-64 aspect-square float-left m-4 mb-0 rounded-full md:rounded-none"
           />
           <div className="max-w-prose space-y-2 p-4">
             <p>

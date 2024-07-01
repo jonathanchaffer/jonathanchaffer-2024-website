@@ -25,7 +25,7 @@ export const Navbar: FC = () => {
       }`}
     >
       <Container>
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-x-8 gap-y-2">
+        <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-x-8 gap-y-2">
           <NavLink to={$path("/")} className="text-2xl whitespace-nowrap">
             {({ isActive }) =>
               isActive ? (
@@ -38,7 +38,7 @@ export const Navbar: FC = () => {
               )
             }
           </NavLink>
-          <div className="flex gap-2 md:gap-4">
+          <div className="flex gap-4 md:gap-4">
             <NavbarLink to={$path("/work")}>Work</NavbarLink>
             <NavbarLink to={$path("/resume")}>Resume</NavbarLink>
             <NavbarLink to={$path("/contact")}>Contact</NavbarLink>
@@ -54,8 +54,8 @@ const NavbarLink: FC<PropsWithChildren<{ to: string }>> = (props) => {
     <NavLink
       to={props.to}
       className={({ isActive }) =>
-        `px-2 sm:px-4 py-2 border text-xs md:text-base ${
-          isActive ? "border-bg-contrast" : "border-transparent"
+        `sm:px-4 py-2 border text-xs md:text-base ${
+          isActive ? "border-bg-contrast px-2" : "border-transparent"
         }`
       }
     >
