@@ -1,3 +1,4 @@
+import { $path } from "remix-routes";
 import { Card } from "~/components/card";
 import { Link } from "~/components/link";
 import { PageHeader } from "~/components/page-header";
@@ -25,9 +26,15 @@ export default function () {
               <div className="flex flex-col grow gap-4 px-8 py-8">
                 <h2 className="text-2xl md:text-4xl">{project.title}</h2>
                 <p>{project.description}</p>
-                {project.url && (
+                {(project.url || project.embedUrl) && (
                   <div className="text-lg mb-1">
-                    <Link to={project.url} openInNewTab>
+                    <Link
+                      to={
+                        project.url ??
+                        $path("/work/:slug", { slug: project.slug })
+                      }
+                      openInNewTab
+                    >
                       {project.linkText}
                     </Link>
                   </div>

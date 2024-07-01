@@ -31,12 +31,14 @@ export const projects: Project[] = [
     tags: ["typescript", "react"],
   },
   {
-    title: "Lorem Ipsum",
-    slug: "lorem-ipsum",
+    title: "Shape Stack",
+    slug: "shape-stack",
     description:
-      "Cupidatat ut voluptate anim enim aliquip veniam id dolor ipsum minim consectetur eu nostrud ullamco.",
-    thumbnail: "https://via.placeholder.com/512",
-    tags: [],
+      "Generative art project that explores organic line drawing. Randomly generated on each load, scaling automatically based on the window size.",
+    thumbnail: "/images/shape-stack.png",
+    tags: ["p5.js", "typescript"],
     fullWidth: true,
+    embedUrl: "https://p5-shape-stack.vercel.app/",
+    linkText: "Try it yourself",
   },
 ];
