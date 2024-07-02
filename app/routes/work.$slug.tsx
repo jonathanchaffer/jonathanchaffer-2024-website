@@ -3,13 +3,18 @@ import { useLoaderData } from "@remix-run/react";
 import { $path } from "remix-routes";
 import { z } from "zod";
 import { Card } from "~/components/card";
+import { Link } from "~/components/link";
 import { PageHeader } from "~/components/page-header";
 import { projects } from "~/content/projects";
+import { Project, WithEmbed } from "~/types";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
   const { slug } = z.object({ slug: z.string() }).parse(params);
 
-  const project = projects.find((project) => project.slug === slug);
+  const project = projects.find(
+    (project): project is WithEmbed<Project> =>
+      "slug" in project && project.slug === slug
+  );
 
   if (!project) {
     throw redirect($path("/work"));
@@ -23,6 +28,9 @@ export default function () {
 
   return (
     <div className="flex flex-col gap-8 max-h-screen">
+      <Link to={$path("/work")} direction="left">
+        Back
+      </Link>
       <PageHeader noMargin>{project.title}</PageHeader>
       <p className="max-w-prose">{project.description}</p>
       <div className="max-w-screen-md">

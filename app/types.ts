@@ -11,26 +11,28 @@ const tags = [
 
 export type Tag = (typeof tags)[number];
 
-export type Project = {
-  title: string;
+type WithExternalLink<T> = T & {
+  url: string;
+  linkText: string;
+};
+
+export type WithEmbed<T> = T & {
   slug: string;
+  embedUrl: string;
+  linkText: string;
+};
+
+type WithNoLink<T> = T;
+
+type BaseProject = {
+  title: string;
   description: string;
   thumbnail: string;
   tags: Tag[];
   fullWidth?: boolean;
-} & (
-  | {
-      url: string;
-      embedUrl?: string;
-      linkText: string;
-    }
-  | {
-      url?: never;
-      embedUrl: string;
-      linkText: string;
-    }
-  | {
-      url?: never;
-      embedUrl?: never;
-    }
-);
+};
+
+export type Project =
+  | WithExternalLink<BaseProject>
+  | WithEmbed<BaseProject>
+  | WithNoLink<BaseProject>;

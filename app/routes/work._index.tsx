@@ -13,7 +13,7 @@ export default function () {
         <div className="grid grid-cols-1 xl:grid-cols-2 bg-bg-contrast gap-[1px]">
           {projects.map((project) => (
             <div
-              key={project.slug}
+              key={project.title}
               className={`flex flex-col sm:flex-row justify-center sm:items-center bg-bg ${
                 project.fullWidth ? "col-span-full" : "col-span-1"
               }`}
@@ -26,14 +26,15 @@ export default function () {
               <div className="flex flex-col grow gap-4 px-8 py-8">
                 <h2 className="text-2xl md:text-4xl">{project.title}</h2>
                 <p>{project.description}</p>
-                {(project.url || project.embedUrl) && (
+                {("url" in project || "embedUrl" in project) && (
                   <div className="text-lg mb-1">
                     <Link
                       to={
-                        project.url ??
-                        $path("/work/:slug", { slug: project.slug })
+                        "url" in project
+                          ? project.url
+                          : $path("/work/:slug", { slug: project.slug })
                       }
-                      openInNewTab
+                      openInNewTab={"url" in project}
                     >
                       {project.linkText}
                     </Link>

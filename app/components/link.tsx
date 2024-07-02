@@ -4,6 +4,7 @@ import { FC, PropsWithChildren } from "react";
 type Props = {
   to: string;
   openInNewTab?: boolean;
+  direction?: "left" | "right";
 };
 
 export const Link: FC<PropsWithChildren<Props>> = (props) => {
@@ -14,7 +15,11 @@ export const Link: FC<PropsWithChildren<Props>> = (props) => {
       target={props.openInNewTab ? "_blank" : undefined}
       rel={props.openInNewTab ? "noopener noreferrer" : undefined}
     >
-      {props.children} &rarr;
+      {props.direction === "left" && <>← </>}
+      {props.children}
+      {(props.direction === "right" || props.direction === undefined) && (
+        <> →</>
+      )}
     </RemixLink>
   );
 };
