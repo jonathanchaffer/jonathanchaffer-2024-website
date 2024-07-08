@@ -31,7 +31,7 @@ export const projects: Project[] = [
     title: "Organic Drawing",
     slug: "organic-drawing",
     description:
-      "Generative art project that uses a hand-drawn aesthetic. Randomly selects one of a few different drawing algorithms on each load to create a unique piece each time.",
+      "Generative art project that uses a hand-drawn aesthetic. Randomly selects one of several different drawing algorithms to create a unique piece each time.",
     thumbnail: "/images/organic-drawing.png",
     tags: ["p5.js", "typescript"],
     fullWidth: true,
