@@ -20,6 +20,7 @@ export type WithEmbed<T> = T & {
   slug: string;
   embedUrl: string;
   linkText: string;
+  longDescription?: string;
 };
 
 type WithNoLink<T> = T;

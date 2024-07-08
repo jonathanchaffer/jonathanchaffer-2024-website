@@ -32,6 +32,8 @@ export const projects: Project[] = [
     slug: "organic-drawing",
     description:
       "Generative art project that uses a hand-drawn aesthetic. Randomly selects one of several different drawing algorithms to create a unique piece each time.",
+    longDescription: `Generative art project that uses a hand-drawn aesthetic. Randomly selects one of several different drawing algorithms to create a unique piece each time. 
+    \nReload the page to generate a new drawing; hit Enter to save a high-quality PNG of the current drawing.`,
     thumbnail: "/images/organic-drawing.png",
     tags: ["p5.js", "typescript"],
     fullWidth: true,

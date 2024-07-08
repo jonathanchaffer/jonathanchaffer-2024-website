@@ -1,5 +1,6 @@
 import { LoaderFunctionArgs, json, redirect } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
+import Markdown from "react-markdown";
 import { $path } from "remix-routes";
 import { z } from "zod";
 import { Card } from "~/components/card";
@@ -27,12 +28,14 @@ export default function () {
   const { project } = useLoaderData<typeof loader>();
 
   return (
-    <div className="flex flex-col gap-8 max-h-screen">
+    <div className="flex flex-col gap-8">
       <Link to={$path("/work")} direction="left">
         Back
       </Link>
       <PageHeader noMargin>{project.title}</PageHeader>
-      <p className="max-w-prose">{project.description}</p>
+      <Markdown className="max-w-prose flex flex-col gap-2">
+        {project.longDescription ?? project.description}
+      </Markdown>
       <div className="max-w-screen-md">
         <Card>
           <div className="aspect-square">
