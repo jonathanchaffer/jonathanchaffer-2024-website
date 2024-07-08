@@ -22,7 +22,7 @@ export default function () {
       <Card>
         <div className="flex-row md:flex gap-y-4 items-center">
           <img
-            src="/jonathanchaffer.jpg"
+            src="images/jonathanchaffer.jpg"
             alt={strs.JONATHAN_CHAFFER}
             className="w-16 md:w-64 md:h-64 aspect-square float-left m-4 mb-0 md:mb-4 rounded-full md:rounded-none"
           />
