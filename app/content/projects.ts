@@ -30,14 +30,36 @@ export const projects: Project[] = [
   {
     title: "Organic Drawing",
     slug: "organic-drawing",
+    fullWidth: true,
     description:
-      "Generative art project that uses a hand-drawn aesthetic. Randomly selects one of several different drawing algorithms to create a unique piece each time.",
+      "Generative art project that uses a hand-drawn aesthetic. Creates a unique piece on each run.",
     longDescription: `Generative art project that uses a hand-drawn aesthetic. Randomly selects one of several different drawing algorithms to create a unique piece each time. 
     \nReload the page to generate a new drawing; hit Enter to save a high-quality PNG of the current drawing.`,
     thumbnail: "/images/organic-drawing.png",
     tags: ["p5.js", "typescript"],
-    fullWidth: true,
     embedUrl: "https://p5-organic-drawing.vercel.app/",
     linkText: "Try it yourself",
+  },
+  {
+    title: "Portfolio Site",
+    description:
+      "The site you're currently viewing! Built with Remix and Tailwind CSS.",
+    thumbnail: "/images/jonathanchaffer.jpg",
+    tags: ["remix.js", "tailwind css"],
+  },
+  {
+    title: "CQL",
+    description:
+      "During a summer internship at CQL, I worked with a team to build an internal employee performance tracking tool.",
+    thumbnail: "/images/cql.png",
+    tags: ["typescript", "react"],
+  },
+  {
+    title: "Student Activities Committee",
+    fullWidth: true,
+    description:
+      "I served as the lead graphic designer for my college's Student Activities Committee, creating promotional materials for campus events.",
+    thumbnail: "/images/sac.png",
+    tags: ["graphic design"],
   },
 ];

@@ -7,6 +7,9 @@ const tags = [
   "cloud platforms",
   "node.js",
   "p5.js",
+  "graphic design",
+  "remix.js",
+  "tailwind css",
 ] as const;
 
 export type Tag = (typeof tags)[number];
