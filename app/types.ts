@@ -10,6 +10,7 @@ const tags = [
   "graphic design",
   "remix.js",
   "tailwind css",
+  "python",
 ] as const;
 
 export type Tag = (typeof tags)[number];

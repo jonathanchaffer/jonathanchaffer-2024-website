@@ -6,7 +6,14 @@ export const projects: Project[] = [
     description:
       "I currently work as a software consultant and developer at Atomic Object. In this role, I work closely with clients to deliver high-quality custom software solutions. During my time at Atomic, I've worked on a variety of projects serving a range of industries, including retail, manufacturing, and franchising. I also write regularly for Atomic Spin.",
     thumbnail: "/images/atomic-object.png",
-    tags: ["typescript", "react", "postgresql", "cloud platforms", "node.js"],
+    tags: [
+      "typescript",
+      "react",
+      "postgresql",
+      "cloud platforms",
+      "node.js",
+      "python",
+    ],
     fullWidth: true,
     url: "https://spin.atomicobject.com/author/jonathan-chaffer/",
     linkText: "View my Spin posts",
