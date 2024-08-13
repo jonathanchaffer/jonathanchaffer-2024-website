@@ -58,7 +58,7 @@ export const projects: Project[] = [
     title: "Student Activities Committee",
     fullWidth: true,
     description:
-      "I served as the lead graphic designer for my college's Student Activities Committee, creating promotional materials for campus events.",
+      "I served as the lead graphic designer for my college's Student Activities Committee. In this role, I created promotional materials for campus events, along with a brand guide for future designers to follow.",
     thumbnail: "/images/sac.png",
     tags: ["graphic design"],
   },
