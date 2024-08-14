@@ -16,18 +16,30 @@ const tags = [
 export type Tag = (typeof tags)[number];
 
 type WithExternalLink<T> = T & {
+  type: "external-link";
   url: string;
   linkText: string;
 };
 
 export type WithEmbed<T> = T & {
+  type: "embed";
   slug: string;
   embedUrl: string;
   linkText: string;
   longDescription?: string;
 };
 
-type WithNoLink<T> = T;
+type WithNoLink<T> = T & {
+  type: "no-link";
+};
+
+export type WithGallery<T> = T & {
+  type: "gallery";
+  images: string[];
+  slug: string;
+  linkText: string;
+  longDescription?: string;
+};
 
 type BaseProject = {
   title: string;
@@ -40,4 +52,5 @@ type BaseProject = {
 export type Project =
   | WithExternalLink<BaseProject>
   | WithEmbed<BaseProject>
-  | WithNoLink<BaseProject>;
+  | WithNoLink<BaseProject>
+  | WithGallery<BaseProject>;

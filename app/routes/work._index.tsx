@@ -26,7 +26,7 @@ export default function () {
               <div className="flex flex-col grow gap-4 px-8 py-8">
                 <h2 className="text-2xl md:text-4xl">{project.title}</h2>
                 <p>{project.description}</p>
-                {("url" in project || "embedUrl" in project) && (
+                {("url" in project || "slug" in project) && (
                   <div className="text-lg mb-1">
                     <Link
                       to={

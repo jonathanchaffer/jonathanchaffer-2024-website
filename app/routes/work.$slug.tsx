@@ -7,14 +7,15 @@ import { Card } from "~/components/card";
 import { Link } from "~/components/link";
 import { PageHeader } from "~/components/page-header";
 import { projects } from "~/content/projects";
-import { Project, WithEmbed } from "~/types";
+import { Project, WithEmbed, WithGallery } from "~/types";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
   const { slug } = z.object({ slug: z.string() }).parse(params);
 
   const project = projects.find(
-    (project): project is WithEmbed<Project> =>
-      "slug" in project && project.slug === slug
+    (project): project is WithEmbed<Project> | WithGallery<Project> =>
+      (project.type === "embed" || project.type === "gallery") &&
+      project.slug === slug
   );
 
   if (!project) {
@@ -36,17 +37,19 @@ export default function () {
       <Markdown className="max-w-prose flex flex-col gap-2">
         {project.longDescription ?? project.description}
       </Markdown>
-      <div className="max-w-screen-md">
-        <Card>
-          <div className="aspect-square">
-            <iframe
-              src={project.embedUrl}
-              title={project.title}
-              className="h-full w-full"
-            />
-          </div>
-        </Card>
-      </div>
+      {project.type === "embed" && (
+        <div className="max-w-screen-md">
+          <Card>
+            <div className="aspect-square">
+              <iframe
+                src={project.embedUrl}
+                title={project.title}
+                className="h-full w-full"
+              />
+            </div>
+          </Card>
+        </div>
+      )}
     </div>
   );
 }
