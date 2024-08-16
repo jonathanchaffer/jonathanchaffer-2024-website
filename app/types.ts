@@ -35,7 +35,10 @@ type WithNoLink<T> = T & {
 
 export type WithGallery<T> = T & {
   type: "gallery";
-  images: string[];
+  images: {
+    src: string;
+    alt: string;
+  }[];
   slug: string;
   linkText: string;
   longDescription?: string;

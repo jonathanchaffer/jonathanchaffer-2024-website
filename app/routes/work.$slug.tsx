@@ -1,6 +1,7 @@
 import { LoaderFunctionArgs, json, redirect } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import Markdown from "react-markdown";
+import Masonry from "react-masonry-css";
 import { $path } from "remix-routes";
 import { z } from "zod";
 import { Card } from "~/components/card";
@@ -49,6 +50,23 @@ export default function () {
             </div>
           </Card>
         </div>
+      )}
+      {project.type === "gallery" && (
+        <Masonry
+          className="masonry"
+          columnClassName="masonry-column"
+          breakpointCols={{ default: 3, 600: 2 }}
+        >
+          {project.images.map((image, index) => (
+            <div key={index}>
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="border border-bg-contrast"
+              />
+            </div>
+          ))}
+        </Masonry>
       )}
     </div>
   );

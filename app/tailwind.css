@@ -34,3 +34,17 @@
   background-color: var(--color-primary);
   color: var(--color-primary-contrast);
 }
+
+.masonry {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  @apply flex -ml-4 w-auto;
+}
+
+.masonry-column {
+  @apply pl-4;
+}
+
+.masonry-column > div {
+  @apply pb-4;
+}
