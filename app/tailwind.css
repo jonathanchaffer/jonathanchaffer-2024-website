@@ -44,7 +44,3 @@
 .masonry-column {
   @apply pl-4;
 }
-
-.masonry-column > div {
-  @apply pb-4;
-}

@@ -77,43 +77,100 @@ export const projects: Project[] = [
     type: "gallery",
     slug: "sac",
     linkText: "View the gallery",
-    images: [
-      { src: "/images/sac/mt-joy.png", alt: "Mt. Joy concert poster" },
-      { src: "/images/sac/vegas-night.png", alt: "Vegas Night event poster" },
-      { src: "/images/sac/sales.png", alt: "Sales concert poster" },
+    items: [
       {
-        src: "/images/sac/painting-party.png",
-        alt: "Painting Party event poster",
+        type: "image",
+        data: { src: "/images/sac/mt-joy.png", alt: "Mt. Joy concert poster" },
       },
       {
-        src: "/images/sac/rocknroll.png",
-        alt: "Rock 'n Roll-er Skate event poster",
-      },
-      { src: "/images/sac/spring-fling.png", alt: "Spring Fling event poster" },
-      {
-        src: "/images/sac/throwback-time-machine.png",
-        alt: "Throwback Time Machine event poster",
+        type: "image",
+        data: {
+          src: "/images/sac/vegas-night.png",
+          alt: "Vegas Night event poster",
+        },
       },
       {
-        src: "/images/sac/yoga.png",
-        alt: "Yoga in the Pine Grove event poster",
+        type: "image",
+        data: { src: "/images/sac/sales.png", alt: "Sales concert poster" },
       },
       {
-        src: "/images/sac/coffee-house-audition.png",
-        alt: "Coffee House Audition event poster",
+        type: "image",
+        data: {
+          src: "/images/sac/painting-party.png",
+          alt: "Painting Party event poster",
+        },
       },
       {
-        src: "/images/sac/food-truck-frenzy.png",
-        alt: "Food Truck Frenzy event poster",
+        type: "image",
+        data: {
+          src: "/images/sac/rocknroll.png",
+          alt: "Rock 'n Roll-er Skate event poster",
+        },
       },
-      { src: "/images/sac/mentalist.png", alt: "The Mentalist event poster" },
-      { src: "/images/sac/kickball.png", alt: "Kickball event poster" },
       {
-        src: "/images/sac/people-of-the-year.png",
-        alt: "People of the Year event poster",
+        type: "image",
+        data: {
+          src: "/images/sac/spring-fling.png",
+          alt: "Spring Fling event poster",
+        },
       },
-      { src: "/images/sac/sk80s.png", alt: "Sk80s event poster" },
-      { src: "/images/sac/brand-guidelines.png", alt: "SAC Brand Guidelines" },
+      {
+        type: "image",
+        data: {
+          src: "/images/sac/throwback-time-machine.png",
+          alt: "Throwback Time Machine event poster",
+        },
+      },
+      {
+        type: "image",
+        data: {
+          src: "/images/sac/yoga.png",
+          alt: "Yoga in the Pine Grove event poster",
+        },
+      },
+      {
+        type: "image",
+        data: {
+          src: "/images/sac/coffee-house-audition.png",
+          alt: "Coffee House Audition event poster",
+        },
+      },
+      {
+        type: "image",
+        data: {
+          src: "/images/sac/food-truck-frenzy.png",
+          alt: "Food Truck Frenzy event poster",
+        },
+      },
+      {
+        type: "image",
+        data: {
+          src: "/images/sac/mentalist.png",
+          alt: "The Mentalist event poster",
+        },
+      },
+      {
+        type: "image",
+        data: { src: "/images/sac/kickball.png", alt: "Kickball event poster" },
+      },
+      {
+        type: "image",
+        data: {
+          src: "/images/sac/people-of-the-year.png",
+          alt: "People of the Year event poster",
+        },
+      },
+      {
+        type: "image",
+        data: { src: "/images/sac/sk80s.png", alt: "Sk80s event poster" },
+      },
+      {
+        type: "image",
+        data: {
+          src: "/images/sac/brand-guidelines.png",
+          alt: "SAC Brand Guidelines",
+        },
+      },
     ],
   },
 ];

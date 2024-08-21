@@ -33,12 +33,24 @@ type WithNoLink<T> = T & {
   type: "no-link";
 };
 
+type Image = {
+  src: string;
+  alt: string;
+};
+
+type Pdf = {
+  thumbnailSrc: string;
+  thumbnailAlt: string;
+  src: string;
+};
+
+export type GalleryItem =
+  | { type: "image"; data: Image }
+  | { type: "pdf"; data: Pdf };
+
 export type WithGallery<T> = T & {
   type: "gallery";
-  images: {
-    src: string;
-    alt: string;
-  }[];
+  items: GalleryItem[];
   slug: string;
   linkText: string;
   longDescription?: string;
