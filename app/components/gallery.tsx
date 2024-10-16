@@ -1,6 +1,7 @@
-import { FC, useEffect, useMemo, useRef, useState } from "react";
+import { FC, useCallback, useMemo, useState } from "react";
 import Masonry from "react-masonry-css";
 import { GalleryItem } from "~/types";
+import { Dialog } from "./dialog";
 
 type Props = {
   items: GalleryItem[];
@@ -10,20 +11,12 @@ export const Gallery: FC<Props> = (props) => {
   const [carouselIndex, setCarouselIndex] = useState<number | null>(null);
 
   const isDialogOpen = useMemo(() => carouselIndex !== null, [carouselIndex]);
-  const dialogRef = useRef<HTMLDialogElement>(null);
+  const closeDialog = useCallback(() => setCarouselIndex(null), []);
 
   const currentImage = useMemo(
     () => (carouselIndex !== null ? props.items[carouselIndex] : null),
     [carouselIndex, props.items]
   );
-
-  useEffect(() => {
-    if (isDialogOpen) {
-      dialogRef.current?.showModal();
-    } else {
-      dialogRef.current?.close();
-    }
-  }, [isDialogOpen]);
 
   return (
     <>
@@ -47,10 +40,7 @@ export const Gallery: FC<Props> = (props) => {
           </button>
         ))}
       </Masonry>
-      <dialog ref={dialogRef} className="p-4 flex flex-col gap-4">
-        <button className="self-end" onClick={() => setCarouselIndex(null)}>
-          Close
-        </button>
+      <Dialog open={isDialogOpen} onClose={closeDialog}>
         {currentImage !== null &&
           ((currentImage.type === "image" && (
             <img src={currentImage.data.src} alt={currentImage.data.alt} />
@@ -58,7 +48,7 @@ export const Gallery: FC<Props> = (props) => {
             (currentImage.type === "pdf" && (
               <embed src={currentImage.data.src} />
             )))}
-      </dialog>
+      </Dialog>
     </>
   );
 };
