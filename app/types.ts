@@ -11,6 +11,7 @@ const tags = [
   "remix.js",
   "tailwind css",
   "python",
+  "swift",
 ] as const;
 
 export type Tag = (typeof tags)[number];

@@ -13,6 +13,7 @@ export const projects: Project[] = [
       "cloud platforms",
       "node.js",
       "python",
+      "swift",
     ],
     fullWidth: true,
     type: "external-link",
