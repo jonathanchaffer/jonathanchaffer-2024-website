@@ -41,7 +41,6 @@ export const projects: Project[] = [
   {
     title: "Organic Drawing",
     slug: "organic-drawing",
-    fullWidth: true,
     description:
       "Generative art project that uses a hand-drawn aesthetic. Creates a unique piece on each run.",
     longDescription: `Generative art project that uses a hand-drawn aesthetic. Randomly selects one of several different drawing algorithms to create a unique piece each time. 
@@ -51,6 +50,16 @@ export const projects: Project[] = [
     type: "embed",
     embedUrl: "https://p5-organic-drawing.vercel.app/",
     linkText: "Try it yourself",
+  },
+  {
+    title: "YASK (Yet Another Starter Kit)",
+    description:
+      "A back-end starter kit for full-stack apps. Features dependency injection, data persistence & caching, import restrictions, and more.",
+    type: "external-link",
+    url: "https://github.com/jonathanchaffer/yask",
+    linkText: "Check it out",
+    tags: ["typescript", "node.js", "postgresql", "redis"],
+    thumbnail: "/images/yask.png",
   },
   {
     title: "Portfolio Site",

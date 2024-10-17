@@ -12,6 +12,7 @@ const tags = [
   "tailwind css",
   "python",
   "swift",
+  "redis",
 ] as const;
 
 export type Tag = (typeof tags)[number];
