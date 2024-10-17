@@ -31,12 +31,14 @@ export const projects: Project[] = [
     linkText: "Check it out",
   },
   {
-    title: "Boerigter Center App",
+    title: "YASK (Yet Another Starter Kit)",
     description:
-      "My college capstone project was a web application for Hope College's Boerigter Center for Calling and Career. The app helps students explore work opportunities and career paths via an interactive map view.",
-    thumbnail: "/images/boerigter-center.png",
-    tags: ["typescript", "react"],
-    type: "no-link",
+      "A back-end starter kit for full-stack apps. Features dependency injection, data persistence & caching, import restrictions, and more.",
+    type: "external-link",
+    url: "https://github.com/jonathanchaffer/yask",
+    linkText: "Check it out",
+    tags: ["typescript", "node.js", "postgresql", "redis"],
+    thumbnail: "/images/yask.png",
   },
   {
     title: "Organic Drawing",
@@ -50,36 +52,18 @@ export const projects: Project[] = [
     type: "embed",
     embedUrl: "https://p5-organic-drawing.vercel.app/",
     linkText: "Try it yourself",
+    fullWidth: true,
   },
   {
-    title: "YASK (Yet Another Starter Kit)",
+    title: "Boerigter Center App",
     description:
-      "A back-end starter kit for full-stack apps. Features dependency injection, data persistence & caching, import restrictions, and more.",
-    type: "external-link",
-    url: "https://github.com/jonathanchaffer/yask",
-    linkText: "Check it out",
-    tags: ["typescript", "node.js", "postgresql", "redis"],
-    thumbnail: "/images/yask.png",
-  },
-  {
-    title: "Portfolio Site",
-    description:
-      "The site you're currently viewing! Built with Remix and Tailwind CSS.",
-    thumbnail: "/images/jonathanchaffer.jpg",
-    tags: ["remix.js", "tailwind css"],
-    type: "no-link",
-  },
-  {
-    title: "CQL",
-    description:
-      "During a summer internship at CQL, I worked with a team to build an internal employee performance tracking tool.",
-    thumbnail: "/images/cql.png",
+      "My college capstone project was a web application for Hope College's Boerigter Center for Calling and Career. The app helps students explore work opportunities and career paths via an interactive map view.",
+    thumbnail: "/images/boerigter-center.png",
     tags: ["typescript", "react"],
     type: "no-link",
   },
   {
     title: "Student Activities Committee",
-    fullWidth: true,
     description:
       "I served as the lead graphic designer for my college's Student Activities Committee. In this role, I created promotional materials for campus events, along with a brand guide for future designers to follow.",
     thumbnail: "/images/sac.png",
@@ -182,5 +166,22 @@ export const projects: Project[] = [
         },
       },
     ],
+  },
+
+  {
+    title: "Portfolio Site",
+    description:
+      "The site you're currently viewing! Built with Remix and Tailwind CSS.",
+    thumbnail: "/images/jonathanchaffer.jpg",
+    tags: ["remix.js", "tailwind css"],
+    type: "no-link",
+  },
+  {
+    title: "CQL",
+    description:
+      "During a summer internship at CQL, I worked with a team to build an internal employee performance tracking tool.",
+    thumbnail: "/images/cql.png",
+    tags: ["typescript", "react"],
+    type: "no-link",
   },
 ];
