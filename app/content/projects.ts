@@ -37,7 +37,7 @@ export const projects: Project[] = [
       '"Yet Another Starter Kit." A back-end starter kit for full-stack apps. Dependency injection, code structure enforcement, and more.',
     type: "external-link",
     url: "https://github.com/jonathanchaffer/yask",
-    linkText: "Check it out",
+    linkText: "View on GitHub",
     tags: ["typescript", "node.js", "postgresql", "redis"],
     thumbnail: "/images/yask.png",
     fullWidth: true,
