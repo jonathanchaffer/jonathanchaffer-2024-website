@@ -185,7 +185,7 @@ export const projects: Project[] = [
     title: "Portfolio Site",
     description:
       "The site you're currently viewing! Built with Remix and Tailwind CSS.",
-    thumbnail: "/images/jonathanchaffer.jpg",
+    thumbnail: "/images/jc.png",
     tags: ["remix.js", "tailwind css"],
     type: "no-link",
   },
