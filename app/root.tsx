@@ -24,6 +24,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.ico" />
       </head>
       <body className="bg-bg text-bg-contrast">
         <div className="flex flex-col min-h-screen">
