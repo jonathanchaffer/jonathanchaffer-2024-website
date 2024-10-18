@@ -10,7 +10,7 @@ type Props =
 
 export const Input: FC<Props> = (props) => {
   const className =
-    "p-2 bg-bg border border-bg-contrast text-bg-contrast w-full";
+    "p-2 bg-bg border border-bg-contrast text-bg-contrast w-full rounded-none";
 
   if (props.as === "textarea") {
     return <textarea className={className} {...props}></textarea>;
