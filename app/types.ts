@@ -71,3 +71,13 @@ export type Project =
   | WithEmbed<BaseProject>
   | WithNoLink<BaseProject>
   | WithGallery<BaseProject>;
+
+export type Result<T = undefined> =
+  | {
+      status: "success";
+      data: T;
+    }
+  | {
+      status: "failure";
+      message: string;
+    };
