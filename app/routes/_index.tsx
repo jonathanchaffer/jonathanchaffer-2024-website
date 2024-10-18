@@ -44,9 +44,9 @@ export default function () {
           </div>
         </div>
       </Card>
-      <div className="text-xl md:text-2xl lg:text-4xl">
-        <Link to={$path("/work")}>View my work</Link>
-      </div>
+      <Link to={$path("/work")} size="large">
+        View my work
+      </Link>
     </div>
   );
 }
