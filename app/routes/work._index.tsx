@@ -21,7 +21,9 @@ export default function () {
               <img
                 src={project.thumbnail}
                 alt={project.title}
-                className="w-full h-64 sm:h-full object-cover sm:w-48 lg:w-64 lg:h-full"
+                className={
+                  "w-full h-64 sm:h-full object-cover sm:w-48 lg:w-56 lg:h-full"
+                }
               />
               <div className="flex flex-col grow gap-4 px-8 py-8">
                 <h2 className="text-2xl md:text-4xl">{project.title}</h2>

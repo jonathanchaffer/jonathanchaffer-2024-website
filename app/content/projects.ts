@@ -23,22 +23,24 @@ export const projects: Project[] = [
   {
     title: "Story Soapbox",
     description:
-      "Custom blog website built with Next.js. Uses Builder.io for content management. Features a custom component library that allows for easy content creation and editing.",
+      "Custom blog website built with Next.js and Builder.io. Features a custom component library that allows for easy content creation and editing.",
     thumbnail: "/images/story-soapbox.png",
     tags: ["next.js", "builder.io"],
     type: "external-link",
     url: "https://storysoapbox.com",
     linkText: "Check it out",
+    fullWidth: true,
   },
   {
-    title: "YASK (Yet Another Starter Kit)",
+    title: "YASK",
     description:
-      "A back-end starter kit for full-stack apps. Features dependency injection, data persistence & caching, import restrictions, and more.",
+      '"Yet Another Starter Kit." A back-end starter kit for full-stack apps. Dependency injection, code structure enforcement, and more.',
     type: "external-link",
     url: "https://github.com/jonathanchaffer/yask",
     linkText: "Check it out",
     tags: ["typescript", "node.js", "postgresql", "redis"],
     thumbnail: "/images/yask.png",
+    fullWidth: true,
   },
   {
     title: "Organic Drawing",
@@ -52,20 +54,31 @@ export const projects: Project[] = [
     type: "embed",
     embedUrl: "https://p5-organic-drawing.vercel.app/",
     linkText: "Try it yourself",
-    fullWidth: true,
+  },
+  {
+    title: "Crazygrid",
+    slug: "crazygrid",
+    description:
+      "Generative art project that draws a grid (of grids, of grids). Creates a unique piece on each run.",
+    longDescription: `Generative art project that draws a grid (of grids, of grids). Each recursive level generates its own color palette based on its parent, resulting in localized areas of similar color. Reload the page to generate a new drawing; hit Enter to save a high-quality PNG of the current drawing.`,
+    thumbnail: "/images/crazygrid.png",
+    tags: ["p5.js", "typescript"],
+    type: "embed",
+    embedUrl: "https://p5-crazygrid.vercel.app/",
+    linkText: "Try it yourself",
   },
   {
     title: "Boerigter Center App",
     description:
-      "My college capstone project was a web application for Hope College's Boerigter Center for Calling and Career. The app helps students explore work opportunities and career paths via an interactive map view.",
+      "My college capstone project was an app for Hope College's Boerigter Center for Calling and Career. It helps students explore career paths via an interactive map view.",
     thumbnail: "/images/boerigter-center.png",
     tags: ["typescript", "react"],
     type: "no-link",
   },
   {
-    title: "Student Activities Committee",
+    title: "SAC",
     description:
-      "I served as the lead graphic designer for my college's Student Activities Committee. In this role, I created promotional materials for campus events, along with a brand guide for future designers to follow.",
+      "I served as the lead graphic designer for my college's Student Activities Committee. In this role, I created promo materials for events and a marketing & brand guide.",
     thumbnail: "/images/sac.png",
     tags: ["graphic design"],
     type: "gallery",
