@@ -9,7 +9,7 @@ export const sendEmail = async (args: {
   const resend = new Resend(process.env.RESEND_API_KEY);
   const { error } = await resend.emails.send({
     from: `${args.name} <contact@jonathanchaffer.com>`,
-    subject: "New message via Contact Form",
+    subject: `New message from ${args.name} via Contact Form`,
     to: "jonathanchaffer@gmail.com",
     replyTo: args.email,
     text: args.message,
