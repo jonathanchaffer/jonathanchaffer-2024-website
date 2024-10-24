@@ -33,7 +33,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
         <link rel="apple-touch-icon" href="/apple-touch-icon.ico" />
       </head>
-      <body className="bg-bg text-bg-contrast">
+      <body className="bg-bg text-bg-contrast text-sm md:text-base">
         <div className="flex flex-col min-h-screen">
           <Navbar />
           <div className="grow flex items-center mt-36">
