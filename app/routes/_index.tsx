@@ -16,7 +16,7 @@ export default function () {
           <img
             src="images/jonathanchaffer.jpg"
             alt={strs.JONATHAN_CHAFFER}
-            className="w-16 sm:w-24 md:w-64 md:h-64 aspect-square float-right m-4 md:mb-4"
+            className="w-20 sm:w-24 md:w-64 md:h-64 aspect-square float-right m-4 md:mb-4"
           />
           <div className="max-w-prose space-y-2 p-4">
             <p>
