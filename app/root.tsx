@@ -1,4 +1,4 @@
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
   Links,
   Meta,
@@ -15,6 +15,13 @@ import { TexturedBg } from "./components/textured-bg";
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
 ];
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Jonathan Chaffer" },
+    { name: "description", content: "Developer • Designer • Artist" },
+  ];
+};
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (

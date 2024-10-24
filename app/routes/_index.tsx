@@ -1,16 +1,8 @@
-import type { MetaFunction } from "@remix-run/node";
 import { $path } from "remix-routes";
 import { Card } from "~/components/card";
 import { Link } from "~/components/link";
 import { PageHeader } from "~/components/page-header";
 import { strs } from "~/content/strings";
-
-export const meta: MetaFunction = () => {
-  return [
-    { title: "Jonathan Chaffer" },
-    { name: "description", content: "Developer • Designer • Artist" },
-  ];
-};
 
 export default function () {
   return (
