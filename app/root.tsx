@@ -43,6 +43,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <TexturedBg />
         </div>
         <ScrollRestoration />
+        <script src="https://www.google.com/recaptcha/api.js"></script>
         <Scripts />
       </body>
     </html>

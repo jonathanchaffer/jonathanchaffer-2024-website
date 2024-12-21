@@ -52,7 +52,13 @@ export default function () {
             name="message"
           />
         </InputLabelWrapper>
-        <Button className="self-start" size="large">
+        <Button
+          className="self-start g-recaptcha"
+          size="large"
+          data-sitekey="6LeYl6IqAAAAAGlebK2GJe4rQpgQmOx08_Ak1uu5"
+          data-callback="onSubmit"
+          data-action="submit"
+        >
           Send message
         </Button>
       </form>
