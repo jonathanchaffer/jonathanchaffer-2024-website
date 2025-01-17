@@ -13,6 +13,8 @@ const tags = [
   "python",
   "swift",
   "redis",
+  "c#",
+  ".net",
 ] as const;
 
 export type Tag = (typeof tags)[number];

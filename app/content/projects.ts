@@ -14,6 +14,8 @@ export const projects: Project[] = [
       "node.js",
       "python",
       "swift",
+      "c#",
+      ".net",
     ],
     fullWidth: true,
     type: "external-link",
