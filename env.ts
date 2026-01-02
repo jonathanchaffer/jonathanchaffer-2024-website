@@ -1,4 +1,4 @@
-import z from "zod";
+import { z, type infer as Infer } from "zod";
 
 // Define the schema for the environment variables, validating them and updating
 // the global process.env type to include the validated values.
@@ -13,7 +13,7 @@ envSchema.parse(process.env);
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace NodeJS {
-    interface ProcessEnv extends z.infer<typeof envSchema> {}
+    interface ProcessEnv extends Infer<typeof envSchema> {}
   }
 }
 
