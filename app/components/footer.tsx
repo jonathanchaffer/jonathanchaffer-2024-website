@@ -12,14 +12,8 @@ export const Footer: FC = () => {
       <Container>
         <div className="py-8 justify-center md:items-end items-center flex-col md:flex-row md:justify-between flex text-xs gap-y-8">
           <div className="flex gap-8">
-            <SocialIcon
-              href="https://github.com/jonathanchaffer"
-              icon={faGithub}
-            />
-            <SocialIcon
-              href="https://www.linkedin.com/in/jonathan-chaffer/"
-              icon={faLinkedin}
-            />
+            <SocialIcon href={strs.GITHUB_URL} icon={faGithub} />
+            <SocialIcon href={strs.LINKEDIN_URL} icon={faLinkedin} />
           </div>
           <span>
             © {new Date().getFullYear()} {strs.JONATHAN_CHAFFER}

@@ -5,8 +5,7 @@ export const strs = {
   WORK: "Work",
   CONTACT: "Contact",
   GET_IN_TOUCH: "Get in touch",
-  CONTACT_FORM_DESCRIPTION:
-    "Want to work together? Fill out the form below and I'll get back to you as soon as I can.",
-  THANKS: "Thanks!",
-  CONTACT_SUCCESS_DESCRIPTION: "Your message has been sent.",
+  EMAIL: "jonathanchaffer@gmail.com",
+  GITHUB_URL: "https://github.com/jonathanchaffer",
+  LINKEDIN_URL: "https://www.linkedin.com/in/jonathan-chaffer/",
 };
