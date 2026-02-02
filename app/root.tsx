@@ -1,3 +1,5 @@
+import { config as fontAwesomeConfig } from "@fortawesome/fontawesome-svg-core";
+import fontAwesomeStyles from "@fortawesome/fontawesome-svg-core/styles.css?url";
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
   Links,
@@ -12,8 +14,11 @@ import { Footer } from "./components/footer";
 import { Navbar } from "./components/navbar";
 import { TexturedBg } from "./components/textured-bg";
 
+fontAwesomeConfig.autoAddCss = false;
+
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
+  { rel: "stylesheet", href: fontAwesomeStyles },
 ];
 
 export const meta: MetaFunction = () => {
