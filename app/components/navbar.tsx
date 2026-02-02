@@ -25,12 +25,12 @@ export const Navbar: FC = () => {
       }`}
     >
       <Container>
-        <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-x-8 gap-y-2">
+        <div className="flex flex-col md:flex-row justify-between md:items-center gap-x-8 gap-y-2">
           <NavLink to={$path("/")} className="text-2xl whitespace-nowrap">
             {({ isActive }) =>
               isActive ? (
                 <>
-                  <div className="bg-bg-contrast w-4 aspect-square hidden sm:block" />
+                  <div className="bg-bg-contrast w-4 aspect-square hidden md:block" />
                   <span className="sm:hidden">{strs.JONATHAN_CHAFFER}</span>
                 </>
               ) : (
@@ -41,6 +41,9 @@ export const Navbar: FC = () => {
           <div className="flex gap-4 md:gap-4">
             <NavbarLink to={$path("/")}>{strs.HOME}</NavbarLink>
             <NavbarLink to={$path("/work")}>{strs.WORK}</NavbarLink>
+            <NavbarLink to={"/resume.pdf"} openInNewTab>
+              Resume
+            </NavbarLink>
             <NavbarLink to={$path("/contact")}>{strs.CONTACT}</NavbarLink>
           </div>
         </div>
@@ -49,12 +52,16 @@ export const Navbar: FC = () => {
   );
 };
 
-const NavbarLink: FC<PropsWithChildren<{ to: string }>> = (props) => {
+const NavbarLink: FC<
+  PropsWithChildren<{ to: string; openInNewTab?: boolean }>
+> = (props) => {
   return (
     <NavLink
       to={props.to}
+      target={props.openInNewTab ? "_blank" : undefined}
+      rel={props.openInNewTab ? "noopener noreferrer" : undefined}
       className={({ isActive }) =>
-        `sm:px-4 py-2 border text-xs md:text-base ${
+        `md:px-4 py-2 border text-xs md:text-base ${
           isActive ? "border-bg-contrast px-2" : "border-transparent"
         }`
       }
