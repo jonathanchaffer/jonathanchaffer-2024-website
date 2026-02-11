@@ -31,7 +31,7 @@ export const projects: Project[] = [
     type: "external-link",
     url: "https://storysoapbox.com",
     linkText: "Check it out",
-    fullWidth: true,
+    fullWidth: false,
   },
   {
     title: "YASK",
@@ -42,6 +42,17 @@ export const projects: Project[] = [
     linkText: "View on GitHub",
     tags: ["typescript", "node.js", "postgresql", "redis"],
     thumbnail: "/images/yask.png",
+    fullWidth: false,
+  },
+  {
+    title: "The Robot Invasion [REBOOTED]",
+    description:
+      "Outside of programming, I'm really into 2D animation. This is a short film I'm currently working on as a remake of a project I started several years ago but never finished.",
+    thumbnail: "/images/the-robot-invasion.png",
+    tags: ["2d animation", "filmmaking"],
+    type: "external-link",
+    url: "https://www.instagram.com/the.robot.invasion.rebooted/",
+    linkText: "See progress updates",
     fullWidth: true,
   },
   {

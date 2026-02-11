@@ -15,6 +15,8 @@ const tags = [
   "redis",
   "c#",
   ".net",
+  "2d animation",
+  "filmmaking",
 ] as const;
 
 export type Tag = (typeof tags)[number];
