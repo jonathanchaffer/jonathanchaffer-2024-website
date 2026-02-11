@@ -25,9 +25,9 @@ export const projects: Project[] = [
   {
     title: "Story Soapbox",
     description:
-      "Custom blog website built with Next.js and Builder.io. Features a custom component library that allows for easy content creation and editing.",
+      "Custom blog website built with Next.js and Payload CMS. Features a custom component library that allows for easy content creation and editing.",
     thumbnail: "/images/story-soapbox.png",
-    tags: ["next.js", "builder.io"],
+    tags: ["next.js", "payloadcms"],
     type: "external-link",
     url: "https://storysoapbox.com",
     linkText: "Check it out",

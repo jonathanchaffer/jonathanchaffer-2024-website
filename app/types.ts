@@ -1,6 +1,6 @@
 const tags = [
   "next.js",
-  "builder.io",
+  "payloadcms",
   "typescript",
   "react",
   "postgresql",
