@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     title: "Atomic Object",
     description:
-      "I currently work as a software consultant and developer at Atomic Object. In this role, I work closely with clients to deliver high-quality custom software solutions. The projects I've worked on serve a range of industries, including retail, manufacturing, and supply chain management.",
+      "In this role, I collaborated closely with clients to deliver high-quality custom software solutions. I worked on projects serving a range of industries, including retail, manufacturing, supply chain, and AI.",
     thumbnail: "/images/atomic-object.png",
     tags: [
       "typescript",

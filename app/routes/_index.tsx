@@ -30,8 +30,7 @@ export default function () {
               great user experiences.
             </p>
             <p>
-              I currently work as a software developer & consultant at Atomic
-              Object.
+              I currently work as a full-stack software engineer at Hightouch.
             </p>
           </div>
         </div>
