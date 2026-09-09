@@ -21,7 +21,7 @@ export default function () {
           <div className="max-w-prose space-y-2 p-4 md:grow md:flex flex-col justify-center">
             <p>
               Hi, I&apos;m Jonathan! I&apos;m a software developer, graphic
-              designer, and digital artist based in Grand Rapids, Michigan.
+              designer, and digital artist based in Los Angeles, California.
             </p>
             <p>
               I&apos;ve always been passionate about creating things —
