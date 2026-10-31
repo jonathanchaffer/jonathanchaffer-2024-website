@@ -5,7 +5,6 @@ import { z, type infer as Infer } from "zod";
 
 const envSchema = z.object({
   NODE_ENV: z.enum(["development", "production", "test"]),
-  RESEND_API_KEY: z.string(),
 });
 
 envSchema.parse(process.env);
