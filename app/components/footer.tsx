@@ -1,7 +1,7 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
 import { FC } from "react";
 import { strs } from "~/content/strings";
 import { Container } from "./container";

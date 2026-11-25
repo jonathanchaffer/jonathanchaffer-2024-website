@@ -1,25 +1,22 @@
-const tags = [
-  "next.js",
-  "payloadcms",
-  "typescript",
-  "react",
-  "postgresql",
-  "cloud platforms",
-  "node.js",
-  "p5.js",
-  "graphic design",
-  "remix.js",
-  "tailwind css",
-  "python",
-  "swift",
-  "redis",
-  "c#",
-  ".net",
-  "2d animation",
-  "filmmaking",
-] as const;
-
-export type Tag = (typeof tags)[number];
+export type Tag =
+  | "next.js"
+  | "payloadcms"
+  | "typescript"
+  | "react"
+  | "postgresql"
+  | "cloud platforms"
+  | "node.js"
+  | "p5.js"
+  | "graphic design"
+  | "remix.js"
+  | "tailwind css"
+  | "python"
+  | "swift"
+  | "redis"
+  | "c#"
+  | ".net"
+  | "2d animation"
+  | "filmmaking";
 
 type WithExternalLink<T> = T & {
   type: "external-link";

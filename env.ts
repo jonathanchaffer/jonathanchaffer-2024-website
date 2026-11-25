@@ -12,7 +12,9 @@ envSchema.parse(process.env);
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace NodeJS {
-    interface ProcessEnv extends Infer<typeof envSchema> {}
+    interface ProcessEnv {
+      NODE_ENV: Infer<typeof envSchema>["NODE_ENV"];
+    }
   }
 }
 

@@ -1,13 +1,13 @@
 import { config as fontAwesomeConfig } from "@fortawesome/fontawesome-svg-core";
 import fontAwesomeStyles from "@fortawesome/fontawesome-svg-core/styles.css?url";
-import type { LinksFunction, MetaFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "react-router";
 import {
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
+} from "react-router";
 import stylesheet from "~/tailwind.css?url";
 import { Container } from "./components/container";
 import { Footer } from "./components/footer";

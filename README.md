@@ -1,6 +1,8 @@
-# Welcome to Remix + Vite!
+# Jonathan Chaffer's website
 
-📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/future/vite) for details on supported features.
+Built with [React Router](https://reactrouter.com/) and [Vite](https://vite.dev/).
+
+Requires Node.js 22.x. Install dependencies with `npm ci`.
 
 ## Development
 
@@ -24,11 +26,12 @@ Then run the app in production mode:
 npm start
 ```
 
-Now you'll need to pick a host to deploy it to.
+Vercel deployments use the React Router framework preset configured in
+`vercel.json` and `react-router.config.ts`.
 
 ### DIY
 
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
+The built-in React Router app server can also run the production build on Node.js.
 
 Make sure to deploy the output of `npm run build`
 

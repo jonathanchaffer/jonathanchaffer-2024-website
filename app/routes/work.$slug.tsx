@@ -1,7 +1,10 @@
-import { LoaderFunctionArgs, json, redirect } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import {
+  type LoaderFunctionArgs,
+  redirect,
+  useLoaderData,
+  href,
+} from "react-router";
 import Markdown from "react-markdown";
-import { $path } from "remix-routes";
 import { z } from "zod";
 import { Card } from "~/components/card";
 import { Gallery } from "~/components/gallery";
@@ -20,10 +23,10 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
   );
 
   if (!project) {
-    throw redirect($path("/work"));
+    throw redirect(href("/work"));
   }
 
-  return json({ project });
+  return { project };
 };
 
 export default function () {
@@ -31,7 +34,7 @@ export default function () {
 
   return (
     <div className="flex flex-col gap-8">
-      <Link to={$path("/work")} direction="left">
+      <Link to={href("/work")} direction="left">
         Back
       </Link>
       <PageHeader noMargin>{project.title}</PageHeader>

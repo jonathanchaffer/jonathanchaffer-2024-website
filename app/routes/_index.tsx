@@ -1,4 +1,4 @@
-import { $path } from "remix-routes";
+import { href } from "react-router";
 import { Card } from "~/components/card";
 import { Link } from "~/components/link";
 import { PageHeader } from "~/components/page-header";
@@ -35,7 +35,7 @@ export default function () {
           </div>
         </div>
       </Card>
-      <Link to={$path("/work")} size="large">
+      <Link to={href("/work")} size="large">
         View my work
       </Link>
     </div>
