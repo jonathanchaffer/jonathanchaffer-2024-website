@@ -1,3 +1,5 @@
+import type { ImageSource } from "~/image-source";
+
 export type Tag =
   | "next.js"
   | "payloadcms"
@@ -62,7 +64,7 @@ export type WithGallery<T> = T & {
 type BaseProject = {
   title: string;
   description: string;
-  thumbnail: string;
+  thumbnail: ImageSource;
   tags: Tag[];
   fullWidth?: boolean;
 };

@@ -1,4 +1,6 @@
 import { href } from "react-router";
+import portrait from "/images/jonathanchaffer.jpg?blur";
+import { BlurImage } from "~/components/blur-image";
 import { Card } from "~/components/card";
 import { Link } from "~/components/link";
 import { PageHeader } from "~/components/page-header";
@@ -13,10 +15,11 @@ export default function () {
       </div>
       <Card>
         <div className="flex-row md:flex gap-y-4">
-          <img
-            src="images/jonathanchaffer.jpg"
+          <BlurImage
+            image={portrait}
             alt={strs.JONATHAN_CHAFFER}
-            className="w-20 sm:w-24 md:w-64 md:h-64 aspect-square float-right m-4 md:mb-4"
+            className="w-20 sm:w-24 md:w-64 md:h-64 shrink-0 float-right m-4 md:mb-4"
+            style={{ aspectRatio: "1 / 1" }}
           />
           <div className="max-w-prose space-y-2 p-4 md:grow md:flex flex-col justify-center">
             <p>

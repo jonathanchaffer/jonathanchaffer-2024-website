@@ -12,6 +12,27 @@ Run the Vite dev server:
 npm run dev
 ```
 
+## Images with blur placeholders
+
+Import an image from `public/images` with `?blur` and pass it to `BlurImage`:
+
+```tsx
+import portrait from "/images/jonathanchaffer.jpg?blur";
+import { BlurImage } from "~/components/blur-image";
+
+<BlurImage image={portrait} alt="Jonathan Chaffer" className="w-64" />;
+```
+
+Vite uses Sharp during development and builds to generate a tiny inline preview
+and read the original dimensions. Only maintain the original image; there are no
+separate placeholder files to update, and Sharp is not shipped to the browser.
+
+`className` and `style` size the image container, which reserves the original
+aspect ratio by default. For a cropped frame, override `style.aspectRatio` or
+provide a fixed height. For a frame that stretches with a flex row, use
+`style={{ aspectRatio: "auto" }}` with explicit width and stretch alignment.
+Images fill the frame using `object-fit: cover`.
+
 ## Deployment
 
 First, build your app for production:
