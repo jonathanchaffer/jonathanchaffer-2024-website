@@ -1,4 +1,4 @@
-import { $path } from "remix-routes";
+import { href } from "react-router";
 import { Card } from "~/components/card";
 import { Link } from "~/components/link";
 import { PageHeader } from "~/components/page-header";
@@ -34,7 +34,7 @@ export default function () {
                       to={
                         "url" in project
                           ? project.url
-                          : $path("/work/:slug", { slug: project.slug })
+                          : href("/work/:slug", { slug: project.slug })
                       }
                       openInNewTab={"url" in project}
                     >

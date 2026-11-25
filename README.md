@@ -1,6 +1,8 @@
-# Welcome to Remix + Vite!
+# Jonathan Chaffer's website
 
-📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/future/vite) for details on supported features.
+Built with [React Router](https://reactrouter.com/) and [Vite](https://vite.dev/).
+
+Requires Node.js 20.19+, 22.13+, or 24+. Install dependencies with `npm ci`.
 
 ## Development
 

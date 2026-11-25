@@ -1,6 +1,5 @@
-import { NavLink } from "@remix-run/react";
+import { NavLink, href } from "react-router";
 import { FC, PropsWithChildren, useEffect, useState } from "react";
-import { $path } from "remix-routes";
 import { strs } from "~/content/strings";
 import { Container } from "./container";
 
@@ -26,7 +25,7 @@ export const Navbar: FC = () => {
     >
       <Container>
         <div className="flex flex-col md:flex-row justify-between md:items-center gap-x-8 gap-y-2">
-          <NavLink to={$path("/")} className="text-2xl whitespace-nowrap">
+          <NavLink to={href("/")} className="text-2xl whitespace-nowrap">
             {({ isActive }) =>
               isActive ? (
                 <>
@@ -39,12 +38,12 @@ export const Navbar: FC = () => {
             }
           </NavLink>
           <div className="flex gap-4 md:gap-4">
-            <NavbarLink to={$path("/")}>{strs.HOME}</NavbarLink>
-            <NavbarLink to={$path("/work")}>{strs.WORK}</NavbarLink>
+            <NavbarLink to={href("/")}>{strs.HOME}</NavbarLink>
+            <NavbarLink to={href("/work")}>{strs.WORK}</NavbarLink>
             <NavbarLink to={"/resume.pdf"} openInNewTab>
               Resume
             </NavbarLink>
-            <NavbarLink to={$path("/contact")}>{strs.CONTACT}</NavbarLink>
+            <NavbarLink to={href("/contact")}>{strs.CONTACT}</NavbarLink>
           </div>
         </div>
       </Container>
