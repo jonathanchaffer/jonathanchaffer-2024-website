@@ -1,3 +1,13 @@
+import atomicObject from "/images/atomic-object.png?blur";
+import storySoapbox from "/images/story-soapbox.png?blur";
+import yask from "/images/yask.png?blur";
+import robotInvasion from "/images/the-robot-invasion.png?blur";
+import organicDrawing from "/images/organic-drawing.png?blur";
+import crazygrid from "/images/crazygrid.png?blur";
+import boerigterCenter from "/images/boerigter-center.png?blur";
+import sac from "/images/sac.png?blur";
+import portfolio from "/images/jc.png?blur";
+import cql from "/images/cql.png?blur";
 import { Project } from "~/types";
 
 export const projects: Project[] = [
@@ -5,7 +15,7 @@ export const projects: Project[] = [
     title: "Atomic Object",
     description:
       "In this role, I collaborated closely with clients to deliver high-quality custom software solutions. I worked on projects serving a range of industries, including retail, manufacturing, supply chain, and AI.",
-    thumbnail: "/images/atomic-object.png",
+    thumbnail: atomicObject,
     tags: [
       "typescript",
       "react",
@@ -26,7 +36,7 @@ export const projects: Project[] = [
     title: "Story Soapbox",
     description:
       "Custom blog website built with Next.js and Payload CMS. Features a custom component library that allows for easy content creation and editing.",
-    thumbnail: "/images/story-soapbox.png",
+    thumbnail: storySoapbox,
     tags: ["next.js", "payloadcms"],
     type: "external-link",
     url: "https://storysoapbox.com",
@@ -41,14 +51,14 @@ export const projects: Project[] = [
     url: "https://github.com/jonathanchaffer/yask",
     linkText: "View on GitHub",
     tags: ["typescript", "node.js", "postgresql", "redis"],
-    thumbnail: "/images/yask.png",
+    thumbnail: yask,
     fullWidth: false,
   },
   {
     title: "The Robot Invasion [REBOOTED]",
     description:
       "Outside of programming, I'm really into 2D animation. This is a short film I'm currently working on as a remake of a project I started several years ago but never finished.",
-    thumbnail: "/images/the-robot-invasion.png",
+    thumbnail: robotInvasion,
     tags: ["2d animation", "filmmaking"],
     type: "external-link",
     url: "https://www.instagram.com/the.robot.invasion.rebooted/",
@@ -62,7 +72,7 @@ export const projects: Project[] = [
       "Generative art project that uses a hand-drawn aesthetic. Creates a unique piece on each run.",
     longDescription: `Generative art project that uses a hand-drawn aesthetic. Randomly selects one of several different drawing algorithms to create a unique piece each time. 
     \nReload the page to generate a new drawing; hit Enter to save a high-quality PNG of the current drawing.`,
-    thumbnail: "/images/organic-drawing.png",
+    thumbnail: organicDrawing,
     tags: ["p5.js", "typescript"],
     type: "embed",
     embedUrl: "https://p5-organic-drawing.vercel.app/",
@@ -74,7 +84,7 @@ export const projects: Project[] = [
     description:
       "Generative art project that draws a grid (of grids, of grids). Creates a unique piece on each run.",
     longDescription: `Generative art project that draws a grid (of grids, of grids). Each recursive level generates its own color palette based on its parent, resulting in localized areas of similar color. Reload the page to generate a new drawing; hit Enter to save a high-quality PNG of the current drawing.`,
-    thumbnail: "/images/crazygrid.png",
+    thumbnail: crazygrid,
     tags: ["p5.js", "typescript"],
     type: "embed",
     embedUrl: "https://p5-crazygrid.vercel.app/",
@@ -84,7 +94,7 @@ export const projects: Project[] = [
     title: "Boerigter Center App",
     description:
       "My college capstone project was an app for Hope College's Boerigter Center for Calling and Career. It helps students explore career paths via an interactive map view.",
-    thumbnail: "/images/boerigter-center.png",
+    thumbnail: boerigterCenter,
     tags: ["typescript", "react"],
     type: "no-link",
   },
@@ -92,7 +102,7 @@ export const projects: Project[] = [
     title: "SAC",
     description:
       "I served as the lead graphic designer for my college's Student Activities Committee. In this role, I created promo materials for events and a marketing & brand guide.",
-    thumbnail: "/images/sac.png",
+    thumbnail: sac,
     tags: ["graphic design"],
     type: "gallery",
     slug: "sac",
@@ -198,7 +208,7 @@ export const projects: Project[] = [
     title: "Portfolio Site",
     description:
       "The site you're currently viewing! Built with Remix and Tailwind CSS.",
-    thumbnail: "/images/jc.png",
+    thumbnail: portfolio,
     tags: ["remix.js", "tailwind css"],
     type: "no-link",
   },
@@ -206,7 +216,7 @@ export const projects: Project[] = [
     title: "CQL",
     description:
       "During a summer internship at CQL, I worked with a team to build an internal employee performance tracking tool.",
-    thumbnail: "/images/cql.png",
+    thumbnail: cql,
     tags: ["typescript", "react"],
     type: "no-link",
   },

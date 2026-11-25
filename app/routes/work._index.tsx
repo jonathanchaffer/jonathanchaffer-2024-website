@@ -1,4 +1,5 @@
 import { href } from "react-router";
+import { BlurImage } from "~/components/blur-image";
 import { Card } from "~/components/card";
 import { Link } from "~/components/link";
 import { PageHeader } from "~/components/page-header";
@@ -18,12 +19,13 @@ export default function () {
                 project.fullWidth ? "col-span-full" : "col-span-1"
               }`}
             >
-              <img
-                src={project.thumbnail}
+              <BlurImage
+                image={project.thumbnail}
                 alt={project.title}
                 className={
-                  "w-full h-64 sm:h-full object-cover sm:w-48 lg:w-56 lg:h-full"
+                  "w-full h-64 sm:h-auto sm:self-stretch sm:w-48 lg:w-56 shrink-0"
                 }
+                style={{ aspectRatio: "auto" }}
               />
               <div className="flex flex-col grow gap-4 px-8 py-8">
                 <h2 className="text-2xl md:text-4xl">{project.title}</h2>
